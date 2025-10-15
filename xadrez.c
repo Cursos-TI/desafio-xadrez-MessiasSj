@@ -12,6 +12,7 @@ int main() {
     int torre = 1;
     int rainha;
     int movimentoBispo, movimentoRainha, movimentoTorre;
+    char movimentoCavaloX, movimentoCavaloY;
 
     // Implementação de Movimentação do Bispo
 
@@ -60,6 +61,64 @@ int main() {
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
+
+    
+    // solictar entrada de dados ao usuário
+    printf("Escolha o movimento vertical do cavalor (C)ima ou (B)aixo do Cavalo\n");
+    scanf(" %c", &movimentoCavaloY);
+    printf("Escolha o movimento vertical do cavalor (E)squerda ou (D)ireita do Cavalo\n");
+    scanf(" %c", &movimentoCavaloX);
+
+    //estrutura de menu para escolher o movimento do cavalo + loop aninhado para movimento do cavalo
+
+    switch (movimentoCavaloY)
+    {
+    case 'C':
+    case 'c':
+        if (movimentoCavaloX == 'E'){
+            for (int movimento1 = 0; movimento1 < 1; movimento1++){
+                for (int movimento2 = 0; movimento2 < 2; movimento2++){
+                printf("Cima\n");
+                }
+                printf("Esqueda\n");
+            }
+        } else if (movimentoCavaloX == 'D'){
+            for (int movimento1 = 0; movimento1 < 1; movimento1++){
+                for (int movimento2 = 0; movimento2 < 2; movimento2++){
+                printf("Cima\n");
+                }
+                printf("Direita\n");
+            }
+        }
+        
+    break;
+
+    case 'B':
+    case 'b':
+        if (movimentoCavaloX == 'E' || movimentoCavaloX == 'e'){
+            for (int movimento1 = 0; movimento1 < 1; movimento1++){
+                for (int movimento2 = 0; movimento2 < 2; movimento2++){
+                printf("Baixo\n");
+                }
+                printf("Esqueda\n");
+            }
+        } else if (movimentoCavaloX == 'D' || movimentoCavaloX == 'd'){
+            for (int movimento1 = 0; movimento1 < 1; movimento1++){
+                for (int movimento2 = 0; movimento2 < 2; movimento2++){
+                printf("Baixo\n");
+                }
+                printf("Direita\n");
+            }
+        }
+        
+        break;    
+    
+    default:
+        printf("Opção inválida\n");
+        break;
+    }
+
+        
     // Um loop pode representar a movimentação horizontal e outro vertical.
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
